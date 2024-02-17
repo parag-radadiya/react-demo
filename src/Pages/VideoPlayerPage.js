@@ -205,6 +205,7 @@ const VideoPlayerPage = () => {
         playerRef.current.dispose();
       }
     };
+    // eslint-disable-next-line
   }, [videoRef]);
 
   return (
