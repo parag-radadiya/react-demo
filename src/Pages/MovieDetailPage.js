@@ -211,16 +211,17 @@ function MovieDetailPage() {
       )}
       {isLoading && (
         <div className="fixed z-10 inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center w-full h-full">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white border-opacity-25"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-yellow-300
+ border-opacity-25"></div>
         </div>
       )}
 
       <a href="/"><h1 className="text-3xl  font-bold text-white mb-2 mt-3 md:ml-20 sm:ml-0">Movie<span className="text">Strom</span>
       </h1></a>
-      <DetailScroll/>
+
       <div>
         <hr className="my-5 border-neutral-600 border-1"/>
-        <h4 className='text-white  text-5xl font-serif text-center'>Your Movie</h4>
+        <h4 className='text-white  text-5xl font-serif text-center unbounded-font'>Your Movie</h4>
 
         <hr className="my-4 border-neutral-600  border-1"/>
       </div>
@@ -228,7 +229,7 @@ function MovieDetailPage() {
 
         {movie && (
           <div className="w-10/12 my-5 flex items-center flex-col">
-            <h1 className="text-2xl font-semibold mb-4">{movie.Name}</h1>
+            <h1 className="text-2xl font-semibold mb-4 unbounded-font">{movie.Name}</h1>
 
             <div className="flex flex-col justify-center items-center my-3">
               <img
@@ -239,16 +240,16 @@ function MovieDetailPage() {
 
               <div className="flex flex-col mt-2">
                 <div>
-                  <span className="font-bold">Language: </span>
-                  <span className="font-bold">{movie.Info.Language}</span>
+                  <span className="font-bold unbounded-font">Language: </span>
+                  <span className="font-bold unbounded-font">{movie.Info.Language}</span>
                 </div>
                 <div>
-                  <span className="font-bold">Genere: </span>
-                  <span className="font-bold">{movie.Info.Genere}</span>
+                  <span className="font-bold unbounded-font">Genere: </span>
+                  <span className="font-bold unbounded-font">{movie.Info.Genere}</span>
                 </div>
                 <div>
-                  <span className="font-bold">Quality: </span>
-                  <span className="font-bold">{movie.Info.Quality}</span>
+                  <span className="font-bold unbounded-font">Quality: </span>
+                  <span className="font-bold unbounded-font">{movie.Info.Quality}</span>
                 </div>
               </div>
             </div>
@@ -260,7 +261,7 @@ function MovieDetailPage() {
                     className="flex-1 bg-neutral-600 mx-2"
                     style={{ height: 1 }}
                   ></div>
-                  <span className="text font-extrabold text-xl">
+                  <span className="text font-extrabold text-xl unbounded-font">
                     Screen Shots
                   </span>
                   <br/>
@@ -315,7 +316,7 @@ function MovieDetailPage() {
                         className="flex-1 bg-neutral-600 mx-2"
                         style={{ height: 1 }}
                       ></div>
-                      <span className="text-yellow-300 font-extrabold text-10xl">
+                      <span className="text-white font-extrabold text-10xl unbounded-font">
                         480p
                       </span>
                       <div
@@ -323,7 +324,7 @@ function MovieDetailPage() {
                         style={{ height: 1 }}
                       ></div>
                     </div>
-                    <div className="w-full flex flex-col justify-center items-center">
+                    <div className="w-full flex flex-col justify-center items-center unbounded-font">
                       {Object.keys(mContent.default.R480).map((val, index) => {
                         return (
                           <div
@@ -338,7 +339,8 @@ function MovieDetailPage() {
                                 download(mContent.default.R480[val])
                               }
                               type="button"
-                              className="text-white ml-2 border border-yellow-300 border-1 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                              className="text-white ml-2 border border-yellow-300
+ border-1 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover: focus:outline-none dark:focus:ring-blue-800 unbounded-font"
                             >
                               Download
                             </button>
@@ -348,7 +350,8 @@ function MovieDetailPage() {
                                   openPopUp(mContent.default.R480[val])
                                 }
                                 type="button"
-                                className="focus:outline-none text-white border border-yellow-300 border-1  focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                className="focus:outline-none text-white border border-yellow-300
+ border-1  focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 unbounded-font"
                               >
                                 Watch Online
                               </button>
@@ -367,7 +370,7 @@ function MovieDetailPage() {
                         className="flex-1 bg-neutral-600 mx-2"
                         style={{ height: 1 }}
                       ></div>
-                      <span className="text-yellow-300 font-extrabold text-8xl">
+                      <span className="text-white font-extrabold text-8xl unbounded-font">
                         720p
                       </span>
                       <div
@@ -375,7 +378,7 @@ function MovieDetailPage() {
                         style={{ height: 1 }}
                       ></div>
                     </div>
-                    <div className="w-full flex flex-col justify-center items-center">
+                    <div className="w-full flex flex-col justify-center items-center unbounded-font">
                       {Object.keys(mContent.default.R720).map((val, index) => {
                         return (
                           <div
@@ -390,7 +393,8 @@ function MovieDetailPage() {
                                 download(mContent.default.R720[val])
                               }
                               type="button"
-                              className="text-white border border-yellow-300 border-1 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                              className="text-white border border-yellow-300
+ border-1 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover: focus:outline-none dark:focus:ring-blue-800 unbounded-font"
                             >
                               Download
                             </button>
@@ -400,7 +404,8 @@ function MovieDetailPage() {
                                   openPopUp(mContent.default.R720[val])
                                 }
                                 type="button"
-                                className="focus:outline-none text-white border border-yellow-300 border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                className="focus:outline-none text-white border border-yellow-300
+ border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 unbounded-font"
                               >
                                 Watch Online
                               </button>
@@ -419,7 +424,7 @@ function MovieDetailPage() {
                         className="flex-1 bg-neutral-600 mx-2"
                         style={{ height: 1 }}
                       ></div>
-                      <span className="text-yellow-300 font-extrabold text-8xl">
+                      <span className="text-white font-extrabold text-8xl unbounded-font">
                         1080p
                       </span>
                       <div
@@ -427,7 +432,7 @@ function MovieDetailPage() {
                         style={{ height: 1 }}
                       ></div>
                     </div>
-                    <div className="w-full flex flex-col justify-center items-center">
+                    <div className="w-full flex flex-col justify-center items-center unbounded-font">
                       {Object.keys(mContent.default.R1080).map((val, index) => {
                         return (
                           <div
@@ -442,7 +447,8 @@ function MovieDetailPage() {
                                 download(mContent.default.R1080[val])
                               }
                               type="button"
-                              className="text-white border border-yellow-300 border-1 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                              className="text-white border border-yellow-300
+ border-1 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover: focus:outline-none dark:focus:ring-blue-800 unbounded-font"
                             >
                               Download
                             </button>
@@ -452,7 +458,8 @@ function MovieDetailPage() {
                                   openPopUp(mContent.default.R1080[val])
                                 }
                                 type="button"
-                                className="focus:outline-none text-white border border-yellow-300 border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                className="focus:outline-none text-white border border-yellow-300
+ border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 unbounded-font"
                               >
                                 Watch Online
                               </button>
@@ -482,16 +489,16 @@ function MovieDetailPage() {
                             style={{ height: 1 }}
                           ></div>
                         </div>
-                        <div className="w-full flex flex-col justify-center items-center">
+                        <div className="w-full flex flex-col justify-center items-center unbounded-font">
                           {Object.keys(mContent[val.Name]?.R480).length > 0 &&
                             Object.keys(mContent[val.Name].R480).map(
                               (val1, index) => {
                                 return (
                                   <div
                                     key={mContent[val.Name].R480[val1][0].Fid}
-                                    className="bg-cyan-50 rounded p-2 m-3"
+                                    className=" rounded p-2 m-3"
                                   >
-                                    <span className="text-black text-base font-semibold">
+                                    <span className="text-white text-base font-semibold">
                                       480p (Mirror {index + 1}):{" "}
                                     </span>
                                     <button
@@ -499,10 +506,11 @@ function MovieDetailPage() {
                                         download(mContent[val.Name].R480[val1])
                                       }
                                       type="button"
-                                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                      className="text-white focus:ring-4 focus:ring-blue-300 border border-yellow-300
+ font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover: focus:outline-none dark:focus:ring-blue-800"
                                     >
                                       Download
-                                    </button>
+                                    </button> 
                                     {isStreamAble(
                                       mContent[val.Name].R480[val1]
                                     ) && (
@@ -514,7 +522,8 @@ function MovieDetailPage() {
                                           );
                                         }}
                                         type="button"
-                                        className="focus:outline-none text-white border border-yellow-300 border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                        className="focus:outline-none text-white border border-yellow-300
+ border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
                                       >
                                         Watch Online
                                       </button>
@@ -529,9 +538,9 @@ function MovieDetailPage() {
                                 return (
                                   <div
                                     key={mContent[val.Name].R720[val1][0].Fid}
-                                    className="bg-cyan-50 rounded p-2 m-3"
+                                    className=" rounded p-2 m-3"
                                   >
-                                    <span className="text-black text-base font-semibold">
+                                    <span className="text-white text-base font-semibold">
                                       720p (Mirror {index + 1}):{" "}
                                     </span>
                                     <button
@@ -539,7 +548,8 @@ function MovieDetailPage() {
                                         download(mContent[val.Name].R720[val1])
                                       }
                                       type="button"
-                                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                      className="text-white   focus:ring-4 border border-yellow-300
+ focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover: focus:outline-none dark:focus:ring-blue-800"
                                     >
                                       Download
                                     </button>
@@ -554,7 +564,8 @@ function MovieDetailPage() {
                                           );
                                         }}
                                         type="button"
-                                        className="focus:outline-none text-white border border-yellow-300 border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                        className="focus:outline-none text-white border border-yellow-300
+ border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
                                       >
                                         Watch Online
                                       </button>
@@ -569,9 +580,9 @@ function MovieDetailPage() {
                                 return (
                                   <div
                                     key={mContent[val.Name].R1080[val1][0].Fid}
-                                    className="bg-cyan-50 rounded p-2 m-3"
+                                    className=" rounded p-2 m-3"
                                   >
-                                    <span className="text-black text-base font-semibold">
+                                    <span className="text-white text-base  font-semibold">
                                       1080p (Mirror {index + 1}):{" "}
                                     </span>
                                     <button
@@ -579,7 +590,8 @@ function MovieDetailPage() {
                                         download(mContent[val.Name].R1080[val1])
                                       }
                                       type="button"
-                                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                      className="text-white border border-yellow-300
+  focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover: focus:outline-none dark:focus:ring-blue-800"
                                     >
                                       Download
                                     </button>
@@ -594,7 +606,8 @@ function MovieDetailPage() {
                                           );
                                         }}
                                         type="button"
-                                        className="focus:outline-none text-white border border-yellow-300 border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                        className="focus:outline-none text-white border border-yellow-300
+ border-1 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
                                       >
                                         Watch Online
                                       </button>

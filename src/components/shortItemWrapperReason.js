@@ -92,7 +92,7 @@ const ShortItemWrapperReason = () => {
                                                 className='rounded-xl object-cover '
                                                 style={{ height: '100%', width: '100%' }}                      />
                                         </div>
-                                        <div className="ide">
+                                        <div className="ide unbounded-font text-sm">
                                             <span>{movie.name}</span>
                                         </div>
                                     </div>

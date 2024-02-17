@@ -1,7 +1,27 @@
 .App {
   text-align: center;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Importing Rubik Glitch font using Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+/* Add more @import rules for other fonts as needed */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+/* Applying Anton font to heading */
+.anton-font {
+  font-family: 'Anton', sans-serif;
 }
 
+/* Applying Rubik Glitch font to paragraphs */
+.rubik-glitch-font {
+  font-family: 'Rubik Glitch', sans-serif;
+}
+
+.unbounded-font {
+  font-family: 'Unbounded', sans-serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -137,5 +157,3 @@ li:hover{
 .text-6xl{
   font-size: xx-large;
 }
-
-

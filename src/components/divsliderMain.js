@@ -13,7 +13,7 @@ const DivSliderMain = () => {
         autoplay:true,
         autoplaySpeed:2000,
         speed: 1000,
-        slidesToShow:4,
+        slidesToShow:5,
         slidesToScroll:1,
         responsive: [
             {
@@ -69,7 +69,7 @@ const DivSliderMain = () => {
 
 
     return (
-        <div className="relative   text-left text-lgi text-white font-open-sans ">
+        <div className="relative text-left text-lgi text-white font-open-sans ">
             <div>
                 {loading ? (
                     <p>Loading...</p>
@@ -85,10 +85,10 @@ const DivSliderMain = () => {
                                     className="w-full"
                                 >
                                     <div key={index} className='psh'>
-                                        <div className="relative" style={{ height: "550px", width:'400px', resize: 'both' }}>
+                                        <div className="relative rounded-xl red" style={{ height: "485px", width:'350px', resize: 'both' }}>
 
                                             <img
-                                                className="relative rounded-xl"
+                                                className="relative"
                                                 loading="eager"
                                                 alt=""
                                                 src={d.info.posterlink}
@@ -96,7 +96,7 @@ const DivSliderMain = () => {
                                             />
                                             <div
                                                 className="absolute w-full right-[0%] bottom-[-0.5px] left-[0%] [background:linear-gradient(0deg,_#000_8%,_rgba(0,_0,_0,_0)_92%)] flex flex-col items-start justify-start pt-10 px-5 pb-5 box-border gap-[16px] max-w-full z-[1]">
-                                                <h3 className="m-0 relative text-inherit leading-[20px] font-bold font-inherit text-whitesmoke">
+                                                <h3 className="m-0 relative text-inherit leading-[20px] font-bold font-inherit text-whitesmoke ">
                                                     {d.name.split('(')[0].trim()}
                                                 </h3>
                                                 <div
@@ -104,14 +104,14 @@ const DivSliderMain = () => {
                                                     <div className="flex flex-row items-start justify-start gap-[12px]">
                                                         {/*<div className="relative leading-[20px]">2023</div>*/}
                                                         {/*<div className="relative leading-[20px]">100 min</div>*/}
-                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke">{d.info.genere}</div>
-                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke">{d.info.language}</div>
-                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke">{d.info.rating}</div>
-                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke">{d.info.quality}</div>
+                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke ">{d.info.genere}</div>
+                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke ">{d.info.language}</div>
+                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke ">{d.info.rating}</div>
+                                                        <div className="relative leading-[20px] font-bold font-inherit text-whitesmoke ">{d.info.quality}</div>
                                                         {/*<div className="relative leading-[20px]">Romance (HD)</div>*/}
                                                     </div>
                                                     <div className="relative leading-[20px]">
-                                                        <p className="m-0">
+                                                        <p className="m-0 unbounded-font">
                                                             {d.description}
                                                         </p>
                                                         <p className="m-0">
