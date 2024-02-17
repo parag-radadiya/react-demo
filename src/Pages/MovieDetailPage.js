@@ -274,6 +274,7 @@ function MovieDetailPage() {
                   <img
                     src={`https://images.cdn.kukufm.com/f:webp/q:100/${movie.Info.ScreenShots[0]}`}
                     className="mt-3"
+                    alt=""
                   />
                 )}
                 {movie.Info.ScreenShots.length > 1 && (
@@ -284,6 +285,7 @@ function MovieDetailPage() {
                           key={`${index}_img`}
                           src={`https://images.cdn.kukufm.com/f:webp/q:100/${val}`}
                           className="mt-3"
+                          alt=""
                         />
                       );
                     })}

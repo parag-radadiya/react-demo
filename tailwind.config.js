@@ -1,10 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+const {join} = require("path");
 module.exports = {
     plugins: [
         require('flowbite/plugin')
     ],
-
-    content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/flowbite/**/*.js"],
+    content: [join(__dirname, './index.html'), join(__dirname, './src/**/*.{html,js,tsx}')],
+    // content: [
+    //     "./src/**/*.{js,jsx,ts,tsx}",
+    //     // 'node_modules/flowbite-react/lib/esm/**/*.js'
+    //     // "./node_modules/flowbite/lib/esm/component/**/*.{js,jsx,ts,tsx}"
+    // ],
     theme: {
         container: {
             padding: {
@@ -96,19 +101,5 @@ module.exports = {
             base: "16px",
             inherit: "inherit",
         },
-        // screens: {
-        //   mq1525: {
-        //     raw: "screen and (max-width: 1525px)",
-        //   },
-        //   mq1225: {
-        //     raw: "screen and (max-width: 1225px)",
-        //   },
-        //   mq850: {
-        //     raw: "screen and (max-width: 850px)",
-        //   },
-        //   mq450: {
-        //     raw: "screen and (max-width: 450px)",
-        //   },
-        // },
     }
 }
