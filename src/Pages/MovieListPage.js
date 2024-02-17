@@ -37,6 +37,7 @@ function MovieListPage() {
   const [isSearch, setIsSearch] = useState(false);
   const [rnId, setRnId] = useState("divKey12354");
 
+  // eslint-disable-next-line
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -62,7 +63,8 @@ function MovieListPage() {
     };
 
     fetchData();
-  });
+    // eslint-disable-next-line
+  }, [currentPage, isSearch]);
 
   useEffect(() => {
     const fetchSearchPG = async () => {
@@ -87,7 +89,8 @@ function MovieListPage() {
     if (searchQuery !== "") {
       fetchSearchPG();
     }
-  });
+    // eslint-disable-next-line
+  }, [searchCurrentPage, isSearch]);
 
   const debounce = (func, timeout = 300) => {
     let timer;
@@ -128,7 +131,8 @@ function MovieListPage() {
       setIsSearch(true);
     }
     debounceSearch();
-  });
+    // eslint-disable-next-line
+  }, [searchQuery]);
 
   useEffect(() => {
     // Add the provided script here
