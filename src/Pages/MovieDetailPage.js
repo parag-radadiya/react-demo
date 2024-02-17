@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import mixpanel from "mixpanel-browser";
 import PopupModal from "../PopupModal";
-import DetailScroll from "../components/moviedetailspage";
+
 
 function MovieDetailPage() {
   const { dbID } = useParams();
