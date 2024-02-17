@@ -62,7 +62,7 @@ function MovieListPage() {
     };
 
     fetchData();
-  }, [currentPage, isSearch]);
+  });
 
   useEffect(() => {
     const fetchSearchPG = async () => {
@@ -84,10 +84,10 @@ function MovieListPage() {
         setIsLoading(false);
       }
     };
-    if (searchQuery != "") {
+    if (searchQuery !== "") {
       fetchSearchPG();
     }
-  }, [searchCurrentPage, isSearch]);
+  });
 
   const debounce = (func, timeout = 300) => {
     let timer;
@@ -128,7 +128,7 @@ function MovieListPage() {
       setIsSearch(true);
     }
     debounceSearch();
-  }, [searchQuery]);
+  });
 
   useEffect(() => {
     // Add the provided script here
@@ -148,7 +148,7 @@ function MovieListPage() {
         <nav className="bg-black border-gray-200 dark:border-gray-600 dark:bg-gray-900">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <a
-                href=""
+                href="/home"
                 className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <h1 class="text-6xl font-bold text-white mb-1">
@@ -186,7 +186,7 @@ function MovieListPage() {
               <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block py-2 px-3 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:hover:text-yellow-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                       aria-current="page"
                   >
@@ -221,7 +221,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block py-2 px-3 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:hover:text-yellow-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Movies
@@ -229,7 +229,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block py-2 px-3 text-white rounded hover:text-yellow-300 md:hover:bg-transparent md:hover:text-yellow-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Webserise
@@ -255,7 +255,7 @@ function MovieListPage() {
               <ul>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Bollywood</div>
@@ -263,7 +263,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Hollywood</div>
@@ -271,7 +271,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Comedy</div>
@@ -279,7 +279,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Romance</div>
@@ -287,7 +287,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Mustre</div>
@@ -297,7 +297,7 @@ function MovieListPage() {
               <ul>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Drama</div>
@@ -305,7 +305,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Fantasy</div>
@@ -313,7 +313,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Horrer</div>
@@ -321,7 +321,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Punjabi</div>
@@ -329,7 +329,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">South</div>
@@ -339,7 +339,7 @@ function MovieListPage() {
               <ul>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">WEBDL</div>
@@ -347,7 +347,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">4k</div>
@@ -355,7 +355,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border border-black border-1"
                   >
                     <div className="font-semibold">Horrer</div>
@@ -363,7 +363,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border-black border-1"
                   >
                     <div className="font-semibold">WebSeries</div>
@@ -371,7 +371,7 @@ function MovieListPage() {
                 </li>
                 <li>
                   <a
-                      href="javascript:void(0)"
+                      href="/home"
                       className="block p-3 rounded-lg hover:text-yellow-300 dark:hover:bg-gray-700 border-black border-1"
                   >
                     <div className="font-semibold">hindi</div>
